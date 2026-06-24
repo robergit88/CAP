@@ -76,7 +76,7 @@ powershellcds watch
 
 ### Estado actual
 
-FicheroEstadosrv | Estado
+Fichero | Estado
 -----------------|--------
 `srv/external/solped_create.cds` | ✅ Generado
 `srv/external/solped_attach.cds` | ✅ Generado
