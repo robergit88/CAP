@@ -78,15 +78,9 @@ powershellcds watch
 
 FicheroEstadosrv | Estado
 -----------------|--------
-
 `srv/external/solped_create.cds` | ✅ Generado
-
 `srv/external/solped_attach.cds` | ✅ Generado
-
 `srv/service.cds` | ✅ Creado
-
-`srv/service.js`  | ✅ Creado
-
+`srv/service.js` | ✅ Creado
 `default-env.json` | ✅ Creado
-
 `package.json` | ✅ Configurado
