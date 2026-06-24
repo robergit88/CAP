@@ -27,15 +27,15 @@ Learn more at <https://cap.cloud.sap>.
 
 Verifica Node.js (recomendado v18 o v20 LTS)
 
-`node --version`
+>   `node --version`
 
 Verifica npm
 
-`npm --version`
+>   `npm --version`
 
 Verifica SAP CDS CLI
 
-`cds --version`
+>   `cds --version`
 
 Verifica Cloud Foundry CLI (para despliegue en BTP)
 
@@ -45,23 +45,23 @@ Verifica Cloud Foundry CLI (para despliegue en BTP)
 
 Esto creará una carpeta solped-app con la estructura base de CAP
 
-`cds init solped-app`
+>   `cds init solped-app`
 
 Entrar en la carpeta del proyecto
 
-`cd solped-app`
+>   `cd solped-app`
 
 Instalar las dependencias base
 
-`npm install`
+>   `npm install`
 
 Instalar `axios` para las llamadas HTTP a las APIs externas
 
-`npm install axios`
+>   `npm install axios`
 
 Abrir el proyecto en Visual Studio Code
 
-`code .`
+>   `code .`
 
 ### Paso 03 - Importar metadata APIs para definir el modelo de datos
 
@@ -71,15 +71,15 @@ CAP tiene el comando cds import que permite generar automáticamente el modelo a
 
 API 1 - ME51N (crear SOLPED)
 
-`cds import solped_create.xml --as cds`
+>   `cds import solped_create.xml --as cds`
 
 API 2 - Adjuntar ficheros
 
-`cds import solped_attach.xml --as cds`
+>   `cds import solped_attach.xml --as cds`
 
 ### Paso 04 - Definir servicio
 
-`Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos`
+>   `Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos`
 
 ### Paso 05 - Implementar lógica
 
@@ -103,7 +103,7 @@ Creación manuel en raíz de proyecto `default-env.json` con variables de entorn
 
 Arranque y pruebas
 
-    `cds watch`
+>   `cds watch`
 
 ### Estado actual
 
@@ -118,6 +118,9 @@ Fichero | Estado
 
 ### test desde POSTMAN
 
+
 Crear proyecto en `POSTMAN` y probar
 
 ![PruebaPostaman](img/test_1.png)
+
+[fichero test body json](test_body.json)
