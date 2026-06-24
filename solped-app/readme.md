@@ -73,13 +73,27 @@ API 1 - ME51N (crear SOLPED)
 
 >   `cds import solped_create.xml --as cds`
 
+[fichero solped_create.cds](./srv/external/solped_create.cds)
+
 API 2 - Adjuntar ficheros
 
 >   `cds import solped_attach.xml --as cds`
 
+[fichero solped_attach.cds](./srv/external/solped_attach.cds)
+
 ### Paso 04 - Definir servicio
 
->   `Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos`
+>   Creación manual de `srv/service.cds` con la acción crearSolpedConAdjuntos
+
+
+Modelo de datos de servicio
+
+[fichero service.cds](./srv/service.cds)
+
+Lógica del servicio
+
+[fichero service.js](./srv/service.js)
+
 
 ### Paso 05 - Implementar lógica
 
