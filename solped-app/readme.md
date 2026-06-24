@@ -25,22 +25,29 @@ Learn more at <https://cap.cloud.sap>.
 
 ### Paso 01 - Prerequisitos
 
-`powershellnode --version`
+
 `npm --version`
+
 `cds --version`
+
 `cf --version`
 
 ### Paso 02 - Crear proyecto
 
-powershellcds init solped-app
-cd solped-app
+cds init solped-app
+
+cds solped-app
+
 npm install
+
 npm install axios
+
 code .
 
 ### Paso 03 - Importar metadata APIs
 
-powershellcds import solped_create.xml --as cds
+cds import solped_create.xml --as cds
+
 cds import solped_attach.xml --as cds
 
 ### Paso 04 - Definir servicio
@@ -52,14 +59,19 @@ Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos
 Creación manual de srv/service.js con:
 
 Llamada HTTP a API1 (crear SOLPED)
+
 Obtención del PurchaseRequisition
+
 Llamada HTTP a API2 (adjuntar ficheros)
 
 ### Paso 06 - Configurar entorno
 
-powershellnpm install dotenv  # luego descartado
+npm install dotenv  # luego descartado
+
 Creación de default-env.json con variables de entorno y configuración de package.json
+
 Arranque y pruebas
+
 powershellcds watch
 
 ### Estado actual
