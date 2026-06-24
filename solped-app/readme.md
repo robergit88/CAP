@@ -22,35 +22,59 @@ File or Folder | Purpose
 Learn more at <https://cap.cloud.sap>.
 
 ## Resumen de instrucciones ejecutadas
+
 ### Paso 01 - Prerequisitos
+
 `powershellnode --version`
 `npm --version`
 `cds --version`
 `cf --version`
 
-Paso 02 - Crear proyecto
+### Paso 02 - Crear proyecto
+
 powershellcds init solped-app
 cd solped-app
 npm install
 npm install axios
 code .
-Paso 03 - Importar metadata APIs
+
+### Paso 03 - Importar metadata APIs
+
 powershellcds import solped_create.xml --as cds
 cds import solped_attach.xml --as cds
-Paso 04 - Definir servicio
+
+### Paso 04 - Definir servicio
+
 Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos
-Paso 05 - Implementar lógica
+
+### Paso 05 - Implementar lógica
+
 Creación manual de srv/service.js con:
 
 Llamada HTTP a API1 (crear SOLPED)
 Obtención del PurchaseRequisition
 Llamada HTTP a API2 (adjuntar ficheros)
 
-Paso 06 - Configurar entorno
+### Paso 06 - Configurar entorno
+
 powershellnpm install dotenv  # luego descartado
 Creación de default-env.json con variables de entorno y configuración de package.json
 Arranque y pruebas
 powershellcds watch
 
-Estado actual
-FicheroEstadosrv/external/solped_create.cds✅ Generadosrv/external/solped_attach.cds✅ Generadosrv/service.cds✅ Creadosrv/service.js✅ Creadodefault-env.json✅ Creadopackage.json✅ Configurado
+### Estado actual
+
+FicheroEstadosrv | Estado
+-----------------|--------
+
+`srv/external/solped_create.cds` | ✅ Generado
+
+`srv/external/solped_attach.cds` | ✅ Generado
+
+`srv/service.cds` | ✅ Creado
+
+`srv/service.js`  | ✅ Creado
+
+`default-env.json` | ✅ Creado
+
+`package.json` | ✅ Configurado
