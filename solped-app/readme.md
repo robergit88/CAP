@@ -115,3 +115,7 @@ Fichero | Estado
 `srv/service.js` | ✅ Creado
 `default-env.json` | ✅ Creado
 `package.json` | ✅ Configurado
+
+### test desde POSTMAN
+
+Crear proyecto en `POSTMAN` y probar
