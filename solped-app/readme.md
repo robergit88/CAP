@@ -25,34 +25,61 @@ Learn more at <https://cap.cloud.sap>.
 
 ### Paso 01 - Prerequisitos
 
+Verifica Node.js (recomendado v18 o v20 LTS)
+
+`node --version`
+
+Verifica npm
 
 `npm --version`
 
+Verifica SAP CDS CLI
+
 `cds --version`
+
+Verifica Cloud Foundry CLI (para despliegue en BTP)
 
 `cf --version`
 
-### Paso 02 - Crear proyecto
+### Paso 02 - Crear el proyecto CAP
 
-cds init solped-app
+Esto creará una carpeta solped-app con la estructura base de CAP
 
-cds solped-app
+`cds init solped-app`
 
-npm install
+Entrar en la carpeta del proyecto
 
-npm install axios
+`cd solped-app`
 
-code .
+Instalar las dependencias base
 
-### Paso 03 - Importar metadata APIs
+`npm install`
 
-cds import solped_create.xml --as cds
+Instalae `axios` para las llamadas HTTP a las APIs externas
 
-cds import solped_attach.xml --as cds
+`npm install axios`
+
+Abrir el proyecto en Visual Studio Code
+
+`code .`
+
+### Paso 03 - Importar metadata APIs para definir el modelo de datos
+
+📥 Importar metadata desde APIs externas
+
+CAP tiene el comando cds import que permite generar automáticamente el modelo a partir de metadata de una API. CAP genera el `.cds` automáticamente en `srv/external/`.
+
+API 1 - ME51N (crear SOLPED)
+
+`cds import solped_create.xml --as cds`
+
+API 2 - Adjuntar ficheros
+
+`cds import solped_attach.xml --as cds`
 
 ### Paso 04 - Definir servicio
 
-Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos
+`Creación manual de srv/service.cds con la acción crearSolpedConAdjuntos`
 
 ### Paso 05 - Implementar lógica
 
@@ -66,13 +93,13 @@ Llamada HTTP a API2 (adjuntar ficheros)
 
 ### Paso 06 - Configurar entorno
 
-npm install dotenv  # luego descartado
+`npm install dotenv`  # luego descartado
 
-Creación de default-env.json con variables de entorno y configuración de package.json
+`Creación de default-env.json con variables de entorno y configuración de package.json`
 
 Arranque y pruebas
 
-powershellcds watch
+`cds watch`
 
 ### Estado actual
 
