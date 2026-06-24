@@ -69,7 +69,7 @@ module.exports = cds.service.impl(async function (srv) {
 
         try {
 
-            // ── PASO 1: Obtener CSRF Token para API1 ──
+            // ── PASO 1: Obtener CSRF Token para API1 ── 
             const api1BaseUrl = `${BASE_URL}/sap/opu/odata/sap/zapi_purchasereq_process_srv`;
 
             console.log('api1BaseUrl:', api1BaseUrl); 
