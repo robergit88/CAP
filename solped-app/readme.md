@@ -119,3 +119,5 @@ Fichero | Estado
 ### test desde POSTMAN
 
 Crear proyecto en `POSTMAN` y probar
+
+![PruebaPostaman](img/test_1.png)
