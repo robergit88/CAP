@@ -55,7 +55,7 @@ Instalar las dependencias base
 
 `npm install`
 
-Instalae `axios` para las llamadas HTTP a las APIs externas
+Instalar `axios` para las llamadas HTTP a las APIs externas
 
 `npm install axios`
 
@@ -95,11 +95,15 @@ Llamada HTTP a API2 (adjuntar ficheros)
 
 `npm install dotenv`  # luego descartado
 
-`Creación de default-env.json con variables de entorno y configuración de package.json`
+Creación manuel en raíz de proyecto `default-env.json` con variables de entorno y configuración de package.json
+
+    SAP_BASE_URL=http://azis4nshap102.intranet.naturgy.com:8000
+    SAP_USER=tu_usuario
+    SAP_PASS=tu_contraseña
 
 Arranque y pruebas
 
-`cds watch`
+    `cds watch`
 
 ### Estado actual
 
