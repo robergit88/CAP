@@ -1,0 +1,15 @@
+{
+  "cds": {
+    "requires": {
+      "ZI_EXT0040_ENT_CONTADORES_CDS": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZI_EXT0040_ENT_CONTADORES_CDS"
+      }
+    }
+  },
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4"
+  }
+}
