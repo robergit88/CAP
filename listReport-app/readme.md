@@ -108,3 +108,5 @@ Salida en el servidor local
 
 
 ## 6 Frontend — HTML+JS - Página con filtros y tabla
+
+Crea el fichero app/index.html:
