@@ -30,7 +30,7 @@ Paso | Nombre | Qué hacemos
 1 | Inicializar proyecto CAP | cds init + estructura de carpetas
 2 | Generar modelo de datos | Script que lee XML y genera schema.cds
 3 | Servicio OData | Exponer entidad con service.cds
-4 | Datos de prueba | CSV mock para desarrollo local
+4 | Crear fichero de conexión | fichero json con credenciales de acceso
 5 | Arrancar y verificar OData | Probar endpoint en navegador
 6 | Frontend — HTML+JS | Página con filtros y tabla
 7 | Conectar frontend al OData |Fetch con filtros dinámicos
@@ -44,3 +44,20 @@ Paso | Nombre | Qué hacemos
 Resultado: Modelo importado
 
 ![servicio](./img/img1_srv.png)
+
+## 4 Crear fichero de conexión
+
+``` json
+{
+  "requires": {
+    "ZI_EXT0040_ENT_CONTADORES_CDS": {
+      "kind": "odata",
+      "credentials": {
+        "url": "https://tu-n2a500.com/sap/opu/odata/sap/ZI_EXT0040_ENT_CONTADORES_CDS",
+        "username": "tu-usuario",
+        "password": "tu-password"
+      }
+    }
+  }
+}
+```
