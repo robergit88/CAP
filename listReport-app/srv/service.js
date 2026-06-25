@@ -14,15 +14,19 @@ module.exports = cds.service.impl(async function (srv) {
 
   srv.on('READ', 'Contadores', async (req) => {
     try {
+
       console.log('=== Llamando SAP ===')
+
+      // query string original del navegador
+      const query = req._.req.query  
 
       const response = await axios.get(
         `${creds.url}/ZI_EXT0040_ENT_CONTADORES`,
         {
           params: {
-            '$top': 5,
-            'sap-client': creds.headers['sap-client'],
-            '$format': 'json'
+          ...query,
+          'sap-client': creds.headers['sap-client'],
+          '$format': 'json'        
           },
           auth: {
             username: creds.username,
@@ -32,7 +36,7 @@ module.exports = cds.service.impl(async function (srv) {
       )
 
       console.log('=== Resultado ===', JSON.stringify(response.data).substring(0, 300))
-      
+
       return response.data.d.results
 
     } catch (err) {
