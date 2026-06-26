@@ -1,0 +1,91 @@
+<mvc:View
+    controllerName="app.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+
+    <Page title="Entregas de Contadores">
+
+        <!-- BARRA DE FILTROS -->
+        <subHeader>
+            <Bar>
+                <contentLeft>
+                    <HBox wrap="Wrap" alignItems="End">
+
+                        <VBox class="sapUiSmallMarginEnd">
+                            <Label text="Entrega"/>
+                            <Input id="vbeln" placeholder="180000000" width="150px"/>
+                        </VBox>
+
+                        <VBox class="sapUiSmallMarginEnd">
+                            <Label text="Material"/>
+                            <Input id="matnr" placeholder="107260" width="150px"/>
+                        </VBox>
+
+                        <VBox class="sapUiSmallMarginEnd">
+                            <Label text="Centro"/>
+                            <Input id="werks" placeholder="02M1" width="100px"/>
+                        </VBox>
+
+                        <VBox class="sapUiSmallMarginEnd">
+                            <Label text="Almacén"/>
+                            <Input id="lgort" placeholder="0002" width="100px"/>
+                        </VBox>
+
+                        <VBox alignItems="End">
+                            <Label text=""/>
+                            <HBox>
+                                <Button text="Buscar" type="Emphasized" press=".onBuscar"/>
+                                <Button text="Limpiar" press=".onLimpiar" class="sapUiSmallMarginBegin"/>
+                            </HBox>
+                        </VBox>
+
+                    </HBox>
+                </contentLeft>
+            </Bar>
+        </subHeader>
+
+        <!-- TABLA DE RESULTADOS -->
+        <content>
+            <Table id="tabla" items="{/items}">
+
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="{/info}"/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column><Text text="Entrega"/></Column>
+                    <Column><Text text="Posición"/></Column>
+                    <Column><Text text="Material"/></Column>
+                    <Column><Text text="Centro"/></Column>
+                    <Column><Text text="Almacén"/></Column>
+                    <Column><Text text="Fecha"/></Column>
+                    <Column><Text text="Cantidad"/></Column>
+                    <Column><Text text="Equipo"/></Column>
+                    <Column><Text text="Nº Serie"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{vbeln}"/>
+                            <Text text="{posnr}"/>
+                            <Text text="{matnr}"/>
+                            <Text text="{werks}"/>
+                            <Text text="{lgort}"/>
+                            <Text text="{erdat}"/>
+                            <Text text="{lfimg}"/>
+                            <Text text="{equnr}"/>
+                            <Text text="{sernr}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+        </content>
+
+    </Page>
+
+</mvc:View>

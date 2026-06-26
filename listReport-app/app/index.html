@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Entregas de Contadores</title>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Entrega de Contadores</title>
-        <script 
-                id="sap-ui-bootstrap" 
-                src="resources/sap-ui-core.js" 
-                data-sap-ui-theme="sap_horizon"
-                data-sap-ui-libs="sap.m" 
-                data-sap-ui-compat-version="edge" 
-                data-sap-ui-async="true"
-                data-sap-ui-on-init="module:ui5/listReport-app/app/index" 
-                data-sap-ui-resource-roots='{ "ui5.walkthrough": "./"}'>
-            </script>
-    </head>
+  <script
+    src="https://ui5.sap.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_horizon"
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-async="true"
 
-    <body class="sapUiBody" id="content"> </body>
+    data-sap-ui-resourceroots='{"app": "/"}'>
+  </script>
 
+  <script>
+    sap.ui.getCore().attachInit(function () {
+      new sap.ui.core.ComponentContainer({
+        name: "app",
+        settings: { id: "app" },
+        async: true
+      }).placeAt("content")
+    })
+  </script>
+
+</head>
+<body class="sapUiBody">
+  <div id="content"></div>
+</body>
 </html>

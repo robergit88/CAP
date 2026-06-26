@@ -109,4 +109,31 @@ Salida en el servidor local
 
 ## 6 Frontend — HTML+JS - Página con filtros y tabla
 
-Crea el fichero app/index.html:
+## Estructura correcta de una app SAPUI5 dentro de CAP
+
+app/
+
+└
+── contadores /
+
+    ├── index.html          ← punto de entrada
+
+    ├── manifest.json       ← descriptor de la app (rutas, modelos, libs)
+
+    ├── Component.js        ← componente raíz de SAPUI5
+
+    └── view/
+
+        └── List.view.xml   ← vista XML con los controles
+
+        └── List.controller.js  ← lógica de la vista
+
+### Para qué sirve cada fichero
+
+Fichero | Qué hace
+--------|---------
+`index.html` | Arranca SAPUI5 y carga el `Component.js`
+`manifest.json` | Configura la app: título, rutas, modelos OData
+`Component.js` | Inicializa la app y lee el `manifest.json`
+`List.view.xml` | Define los controles visuales (filtros, tabla)
+`List.controller.js` | Lógica de los botones y llamadas al OData

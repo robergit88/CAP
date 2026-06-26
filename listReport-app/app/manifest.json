@@ -1,0 +1,72 @@
+{
+  "_version": "1.65.0",
+
+  "sap.app": {
+    "id": "app",
+    "type": "application",
+    "title": "Entregas de Contadores",
+    "description": "List Report de entregas de contadores",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/contadores/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": false,
+      "phone": false
+    }
+  },
+
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "contadores.view.List",
+      "type": "XML",
+      "id": "ListView"
+    },
+    "routing": {
+      "routes": [
+        {
+          "name": "List",
+          "pattern": "",
+          "target": "List"
+        }
+      ],
+      "targets": {
+        "List": {
+          "viewName": "List",
+          "viewLevel": 1
+        }
+      }
+    }
+  }
+}

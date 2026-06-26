@@ -5,15 +5,13 @@
         "kind": "odata-v2",
         "model": "srv/external/ZI_EXT0040_ENT_CONTADORES_CDS"
       }
-    },
-    "server": {
-      "static": "./app"
     }
   },
   "dependencies": {
     "@sap-cloud-sdk/connectivity": "^4",
     "@sap-cloud-sdk/http-client": "^4",
     "@sap-cloud-sdk/resilience": "^4",
+    "@sap/cds": "^9.9.1",
     "axios": "^1.18.1"
   }
 }
