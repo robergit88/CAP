@@ -15,7 +15,7 @@ sap.ui.define([
             UIComponent.prototype.init.apply(this, arguments);
 
             // Inicializa el router definido en el manifest
-            this.getRouter().initialize();
+            // this.getRouter().initialize();
         }
 
     });

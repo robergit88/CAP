@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
+ 
+<style>
+  html, body, #content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>  
+
 <head>
+
   <meta charset="UTF-8">
   <title>Entregas de Contadores</title>
 
@@ -17,8 +27,8 @@
   <script>
     sap.ui.getCore().attachInit(function () {
       new sap.ui.core.ComponentContainer({
-        name: "app",
-        settings: { id: "app" },
+        name: "contadores",
+        settings: { id: "contadores" },
         async: true
       }).placeAt("content")
     })
@@ -26,6 +36,7 @@
 
 </head>
 <body class="sapUiBody">
+
   <div id="content"></div>
 </body>
 </html>
