@@ -6,8 +6,8 @@
         "model": "srv/external/ZI_EXT0040_ENT_CONTADORES_CDS"
       }
     },
-    "folders": {
-      "app": "app/"
+    "server": {
+      "static": "./app"
     }
   },
   "dependencies": {
