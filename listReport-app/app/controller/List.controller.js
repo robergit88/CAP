@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, JSONModel, MessageToast) {
     "use strict";
 
-    return Controller.extend("app.controller.List", {
+    return Controller.extend("contadores.controller.List", {
 
         // Se ejecuta al cargar la vista
         onInit: function () {

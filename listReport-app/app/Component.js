@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (UIComponent) {
     "use strict";
 
-    return UIComponent.extend("app.Component", {
+    return UIComponent.extend("contadores.Component", {
 
         // Lee automáticamente el manifest.json
         metadata: {

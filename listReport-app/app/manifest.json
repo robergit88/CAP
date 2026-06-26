@@ -2,7 +2,7 @@
   "_version": "1.65.0",
 
   "sap.app": {
-    "id": "app",
+    "id": "contadores",
     "type": "application",
     "title": "Entregas de Contadores",
     "description": "List Report de entregas de contadores",
